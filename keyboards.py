@@ -5,6 +5,9 @@ access = InlineKeyboardMarkup(inline_keyboard=[[
     InlineKeyboardButton(text='Оплатить 1 ⭐️',pay=True)
 ]])
 
+buy_chat = InlineKeyboardMarkup(inline_keyboard=[[
+    InlineKeyboardButton(text='Купить',callback_data='buy')
+]])
 
 profile_ru = InlineKeyboardMarkup(inline_keyboard=[[
     InlineKeyboardButton(text='Кошелек',callback_data='wallet_ru'),
@@ -66,6 +69,8 @@ profile_uzb = InlineKeyboardMarkup(inline_keyboard=[[
     [InlineKeyboardButton(text='Tilni oʻzgartirish',callback_data='change_language_uzb'),
     InlineKeyboardButton(text='Sozlamalar',callback_data='settings_uzb')]])
 
+
+
 profile_need = InlineKeyboardMarkup(inline_keyboard=[[
     InlineKeyboardButton(text='Portemonnee',callback_data='wallet_need'),
     InlineKeyboardButton(text='Uw abonnement',callback_data='subscribe_need')],
@@ -119,50 +124,9 @@ profile_venger = InlineKeyboardMarkup(inline_keyboard=[[
 
 
 
-
-
-
 admin = InlineKeyboardMarkup(inline_keyboard=[[
     InlineKeyboardButton(text='Удалить рекламу',callback_data='delete_ad')],
     [InlineKeyboardButton(text='Добавить рекламу',callback_data='add_ad')]])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -191,6 +155,7 @@ start_ukr = InlineKeyboardMarkup(inline_keyboard=[[
 #Корейский
 start_kore = InlineKeyboardMarkup(inline_keyboard=[[
     InlineKeyboardButton(text='그룹에 추가',callback_data='group_kore')]])
+
 
 #Португалия 
 start_port = InlineKeyboardMarkup(inline_keyboard=[[
