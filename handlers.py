@@ -97,9 +97,10 @@ async def buy(message: Message):
         await mongo.set_user_balance(tg_id=message.from_user.id, balance=-99)
         await message.answer('Вы успешно купили доступ')
         await mongo.user_buy_chat(tg_id=message.from_user.id,buy=True)
+        await test(ChatJoinRequest)
     else:
         await message.answer('Не хватает денег на балансе')
-    
+
 
 @router.chat_join_request()
 async def test(chat_join_request: ChatJoinRequest):
@@ -107,6 +108,8 @@ async def test(chat_join_request: ChatJoinRequest):
         await chat_join_request.bot.send_message(chat_join_request.from_user.id, 'цыц, узбекиии спятт')
         if mongo.user_buy_chat == True:
             await chat_join_request.approve(hide_requester=False)
+        else:
+            await chat_join_request.bot.send_message(chat_join_request.from_user.id, 'Вы должный оплатить доступ')
     except Exception as ex:
         print(ex)
 

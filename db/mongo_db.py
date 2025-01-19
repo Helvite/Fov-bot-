@@ -85,7 +85,7 @@ class MongoDB:
             user = await self.collection.find_one({"tg_id": tg_id})
             if user:
                 current_user_balance = user['balance']
-            current_balance = current_user_balance + balance
+            current_balance = balance + current_user_balance
             await self.collection.update_one({"tg_id": tg_id}, {"$set": {"balance": current_balance}})
         except Exception as e:
             print(f"Ошибка обновления: {e}")

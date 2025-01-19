@@ -2,12 +2,12 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
 access = InlineKeyboardMarkup(inline_keyboard=[[
-    InlineKeyboardButton(text='Оплатить 1 ⭐️',pay=True)
-]])
+    InlineKeyboardButton(text='Оплатить 1 ⭐️',pay=True)]])
 
 buy_chat = InlineKeyboardMarkup(inline_keyboard=[[
-    InlineKeyboardButton(text='Купить',callback_data='buy')
-]])
+    InlineKeyboardButton(text='Купить',callback_data='buy')]])
+
+
 
 profile_ru = InlineKeyboardMarkup(inline_keyboard=[[
     InlineKeyboardButton(text='Кошелек',callback_data='wallet_ru'),
@@ -68,8 +68,6 @@ profile_uzb = InlineKeyboardMarkup(inline_keyboard=[[
     InlineKeyboardButton(text='Obuna',callback_data='subscribe_uzb')],
     [InlineKeyboardButton(text='Tilni oʻzgartirish',callback_data='change_language_uzb'),
     InlineKeyboardButton(text='Sozlamalar',callback_data='settings_uzb')]])
-
-
 
 profile_need = InlineKeyboardMarkup(inline_keyboard=[[
     InlineKeyboardButton(text='Portemonnee',callback_data='wallet_need'),
